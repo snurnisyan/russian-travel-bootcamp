@@ -58,7 +58,7 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
-  width: 984px;
+  max-width: 984px;
 }
 
 .lead__title {
@@ -214,7 +214,6 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 163%; /* or 29px */
-  text-wrap: normal;
 }
 
 .place__paragraph:last-of-type {
@@ -320,7 +319,7 @@
     margin: 28px 48px 20px;
   }
   .lead {
-    width: 928px;
+    max-width: 928px;
   }
   .lead__image {
     padding-top: calc(32px - (64px - 56px));
