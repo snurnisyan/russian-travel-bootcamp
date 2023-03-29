@@ -32,12 +32,11 @@
 
 .header__logo {
   margin: 0;
-  width: 177px;
-  height: 52px;
+  max-width: 176px;
 }
 
 .header__links {
-  align-self: flex-end;
+  margin-top: calc(46px - 28px);
 }
 
 .header__link {
@@ -348,14 +347,13 @@
     margin: 28px 24px 20px;
   }
   .lead {
-    width: 768px;
+    width: 100%;
   }
   .lead__caption {
     margin-left: 24px;
   }
   .intro {
-    margin: 88px auto;
-    max-width: 720px;
+    margin: 88px 24px;
   }
   .photo-grid {
     gap: 16px;
@@ -384,4 +382,101 @@
   }
 }
 
-@media screen and (max-width: )
+@media screen and (max-width: 660px) {
+  .header {
+    margin: 16px 16px 20px;
+  }
+  .header__logo {
+    max-width: 142px;
+  }
+  .header__links {
+    margin-top: calc(30px - 16px);
+  }
+  .header__link {
+    font-size: 18px;
+    line-height: 20px; /* identical to box height, or 111% */
+  }
+  .lead__title {
+    font-size: 40px;
+    line-height: 44px; /* or 110% */
+  }
+  .lead__subtitle {
+    padding: 16px 0;
+    font-size: 16px;
+    line-height: 20px; /* or 125% */
+  }
+  .lead__image {
+    padding-top: calc(40px - 16px);
+  }
+  .lead__caption {
+    margin-left: 16px;
+  }
+  .intro {
+    margin: 64px 16px;
+  }
+  .intro__title {
+    font-size: 32px;
+    line-height: 35px; /* or 109% */
+  }
+  .photo-grid {
+    gap: 12px;
+    margin: 0 16px 64px;
+  }
+  .place {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    margin: 0;
+    padding-bottom: 50px;
+  }
+  .place__image {
+    margin: 0;
+    width: 100%;
+  }
+  .place__title {
+    margin: 0 16px;
+    font-size: 32px;
+    line-height: 35px; /* identical to box height, or 109% */
+  }
+  .place__website {
+    align-self: start;
+    margin: 0 16px;
+  }
+  .place__paragraph {
+    margin: 0 16px;
+  }
+  .cover {
+    margin: 16px 0 64px;
+    min-height: 200px;
+  }
+  .cover__title {
+    font-size: 32px;
+    line-height: 35px; /* or 109% */
+    padding-bottom: 16px;
+    max-width: 288px;
+  }
+  .cover__subtitle {
+    font-size: 14px;
+    line-height: 16px; /* or 114% */
+    max-width: 288px;
+  }
+  .footer {
+    margin: 0 16px 24px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: start;
+    row-gap: 48px;
+  }
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+  .footer__link {
+    font-size: 24px;
+    line-height: 24px; /* identical to box height, or 100% */
+  }
+  .footer__copyright {
+    line-height: 14px; /* identical to box height, or 100% */
+  }
+}
