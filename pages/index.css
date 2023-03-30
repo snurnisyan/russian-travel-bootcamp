@@ -4,476 +4,60 @@
 /* Подключаем шрифты */
 @import url('../vendor/fonts/fonts.css');
 
-.body {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  background-color: #2A2C2F;
-  color: #FFFFFF;
-  max-width: 1280px;
-  min-width: 320px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
-}
+/* Подключаем стили для всей страницы */
+@import url('../blocks/page/page.css');
 
-.header {
-  max-width: 1184px;
-  max-height: 52px;
-  display: flex;
-  justify-content: space-between;
-  margin: 28px 48px;
-}
+/* Подключаем стили для блока header */
+@import url('../blocks/header/header.css');
+@import url('../blocks/header/__logo/header__logo.css');
+@import url('../blocks/header/__links/header__links.css');
+@import url('../blocks/header/__lang-link/header__lang-link.css');
+@import url('../blocks/header/__lang-link/_ru/header__lang-link_ru.css');
 
-.header__logo {
-  margin: 0;
-  max-width: 176px;
-  width: 100%;
-}
 
-.header__links {
-  margin-top: calc(46px - 28px);
-}
+/* Подключаем стили для основной части контента */
+/* #1 для блока lead */
+@import url('../blocks/lead/lead.css');
+@import url('../blocks/lead/__title/lead__title.css');
+@import url('../blocks/lead/__subtitle/lead__subtitle.css');
+@import url('../blocks/lead/__image-figure/lead__image-figure.css');
+@import url('../blocks/lead/__image/lead__image.css');
+@import url('../blocks/lead/__caption/lead__caption.css');
 
-.header__link {
-  margin: 0;
-  text-decoration: none;
-  color: white;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
-}
+/* #2 для блока intro */
+@import url('../blocks/intro/intro.css');
+@import url('../blocks/intro/__title/intro__title.css');
+@import url('../blocks/intro/__text/intro__text.css');
+@import url('../blocks/intro/__list/intro__list.css');
+@import url('../blocks/intro/__list-text/intro__list-text.css');
+@import url('../blocks/intro/__span-accent/intro__span-accent.css');
 
-.header__lang-link_ru {
-  text-decoration: underline;
-  padding-right: 18px;
-}
+/* #3 для блока photo-grid */
+@import url('../blocks/photo-grid/photo-grid.css');
+@import url('../blocks/photo-grid/__item/photo-grid__item.css');
 
-.lead {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  max-width: 984px;
-}
+/* #4 для блока places */
+@import url('../blocks/places/places.css');
 
-.lead__title {
-  margin: 0;
-  padding-top: 28px;
-  font-weight: 900;
-  font-size: 96px;
-  line-height: 100px; /* or 104% */
-  text-align: center;
-  max-width: 720px;
-}
+/* #5 для блока place */
+@import url('../blocks/place/place.css');
+@import url('../blocks/place/__title/place__title.css');
+@import url('../blocks/place/__website/place__website.css');
+@import url('../blocks/place/__url-heading/place__url-heading.css');
+@import url('../blocks/place/__link/place__link.css');
+@import url('../blocks/place/__image/place__image.css');
+@import url('../blocks/place/__paragraph/place__paragraph.css');
 
-.lead__subtitle {
-  margin: 0;
-  padding: 32px 0;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 36px; /* or 120% */
-  text-align: center;
-  max-width: 640px;
-}
+/* #6 для блока cover */
+@import url('../blocks/cover/cover.css');
+@import url('../blocks/cover/__background/cover__background.css');
+@import url('../blocks/cover/__title/cover__title.css');
+@import url('../blocks/cover/__subtitle/cover__subtitle.css');
 
-.lead__image-figure {
-  box-sizing: border-box;
-  margin: 0;
-}
 
-.lead__image {
-  margin: 0;
-  padding-top: 32px;
-  max-width: 100%;
-}
+/* Подключаем стили для блока footer */
+@import url('../blocks/footer/footer.css');
+@import url('../blocks/footer/__links/footer__links.css');
+@import url('../blocks/footer/__link/footer__link.css');
+@import url('../blocks/footer/__copyright/footer__copyright.css');
 
-.lead__caption {
-  margin: 0;
-  padding-top: 8px;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px; /* identical to box height, or 140% */
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.intro {
-  display: block;
-  margin: 92px auto;
-  max-width: 984px;
-}
-
-.intro__title {
-  margin: 0;
-  font-weight: 900;
-  font-size: 54px;
-  line-height: 58px; /* identical to box height, or 107% */
-}
-
-.intro__text {
-  margin: 0;
-  padding: 40px 0 33px 0;
-  max-width: 690px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 163%; /* or 26px */
-}
-
-.intro__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.intro__list-text {
-  margin: 0;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px; /* or 150% */
-}
-
-.intro__span-accent {
-  margin: 0;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 18px; /* or 150% */
-}
-
-.photo-grid {
-  display: grid;
-  margin: 0 48px 92px;
-  grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(213px, 1fr));
-  gap: 16px;
-}
-
-.photo-grid__item {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.places {
-  display: flex;
-  flex-direction: column;
-}
-
-.place {
-  display: grid;
-  grid-template-columns: 460px 1fr;
-  gap: 48px 40px;
-  margin: 0 148px;
-  padding-bottom: 80px;
-}
-
-.place__title {
-  margin: 0;
-  font-weight: 900;
-  font-size: 72px;
-  line-height: 76px; /* or 106% */
-}
-
-.place__image {
-  width: 100%;
-}
-
-.place__website {
-  align-self: end;
-}
-
-.place__url-heading {
-  margin: 0;
-  padding-bottom: 12px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 12px; /* identical to box height, or 100% */
-  letter-spacing: 2px;
-  color: #AAAAAA;
-}
-
-.place__link {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px; /* identical to box height, or 122% */
-  color: white;
-  transition: opacity 0.3s ease;
-}
-
-.place__link:hover {
-  opacity: 0.8;
-}
-
-.place__paragraph {
-  margin: 0;
-  padding-bottom: 26px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 163%; /* or 29px */
-}
-
-.place__paragraph:last-of-type {
-  padding-bottom: 0;
-}
-
-.cover {
-  margin: 12px 48px 92px;
-}
-
-.cover__background {
-  text-decoration: none;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  background-image: url('../images/cover-trains.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 740px;
-  position: relative;
-}
-
-.cover__background::before {
-  content: "";
-  background-color: #2A2C2F;
-  opacity: 0.3;
-  transition: opacity 0.8s ease;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.cover__background:hover::before {
-  opacity: 0.8;
-}
-
-.cover__title {
-  margin: 0;
-  padding-bottom: 32px;
-  max-width: 560px;
-  font-weight: 900;
-  font-size: 72px;
-  line-height: 76px; /* or 106% */
-  text-align: center;
-  z-index: 1;
-}
-
-.cover__subtitle {
-  margin: 0;
-  max-width: 360px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px; /* or 122% */
-  text-align: center;
-  z-index: 1;
-}
-
-.footer {
-  margin: 0 48px 24px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer__link {
-  padding-right: 18px;
-  color: white;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px; /* identical to box height, or 112% */
-  transition: opacity 0.3s ease;
-}
-
-.footer__link:hover {
-  opacity: 0.8;
-}
-
-.footer__copyright {
-  margin: 0;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px; /* identical to box height, or 114% */
-  text-align: right;
-}
-
-@media screen and (max-width: 1184px) {
-  .header {
-    margin: 28px 48px 20px;
-  }
-  .lead {
-    max-width: 928px;
-  }
-  .lead__image {
-    padding-top: calc(32px - (64px - 56px));
-  }
-  .intro {
-    max-width: 928px;
-  }
-  .photo-grid {
-    gap: 14px;
-  }
-  .place {
-    grid-template-columns: 440px 1fr;
-    margin: 0 48px;
-    gap: 48px 32px;
-  }
-  .cover {
-    margin: 12px 0 92px;
-  }
-  .cover__background {
-    min-height: 640px;
-  }
-}
-
-@media screen and (max-width: 984px) {
-  .header {
-    margin: 28px 24px 20px;
-  }
-  .lead {
-    width: 100%;
-  }
-  .lead__caption {
-    margin-left: 24px;
-  }
-  .intro {
-    margin: 88px 24px;
-  }
-  .photo-grid {
-    gap: 16px;
-    margin: 0 24px 88px;
-  }
-  .place {
-    grid-template-columns: 340px 1fr;
-    margin: 0 24px;
-    gap: 48px 28px;
-    padding-bottom: 73px;
-  }
-  .place__title {
-    font-size: 42px;
-    line-height: 46px; /* or 110% */
-  }
-  .place__paragraph {
-    padding-bottom: 25px;
-    font-size: 16px;
-  }
-  .cover {
-    margin: 17px 0 88px;
-  }
-  .cover__background {
-    min-height: 480px;
-  }
-  .footer {
-    margin: 0 24px 24px;
-  }
-}
-
-@media screen and (max-width: 660px) {
-  .header {
-    margin: 16px 16px 20px;
-  }
-  .header__logo {
-    max-width: 142px;
-  }
-  .header__links {
-    margin-top: calc(30px - 16px);
-  }
-  .header__link {
-    font-size: 18px;
-    line-height: 20px; /* identical to box height, or 111% */
-  }
-  .lead__title {
-    font-size: 40px;
-    line-height: 44px; /* or 110% */
-  }
-  .lead__subtitle {
-    padding: 16px 0;
-    font-size: 16px;
-    line-height: 20px; /* or 125% */
-  }
-  .lead__image {
-    padding-top: calc(40px - 16px);
-  }
-  .lead__caption {
-    margin-left: 16px;
-  }
-  .intro {
-    margin: 64px 16px;
-  }
-  .intro__title {
-    font-size: 32px;
-    line-height: 35px; /* or 109% */
-  }
-  .photo-grid {
-    gap: 12px;
-    margin: 0 16px 64px;
-  }
-  .place {
-    display: flex;
-    flex-direction: column;
-    row-gap: 32px;
-    margin: 0;
-    padding-bottom: 50px;
-  }
-  .place__image {
-    margin: 0;
-    width: 100%;
-  }
-  .place__title {
-    margin: 0 16px;
-    font-size: 32px;
-    line-height: 35px; /* identical to box height, or 109% */
-  }
-  .place__website {
-    align-self: start;
-    margin: 0 16px;
-  }
-  .place__paragraph {
-    margin: 0 16px;
-  }
-  .cover {
-    margin: 16px 0 64px;
-  }
-  .cover__background {
-    min-height: 200px;
-  }
-  .cover__title {
-    font-size: 32px;
-    line-height: 35px; /* or 109% */
-    padding-bottom: 16px;
-    max-width: 288px;
-  }
-  .cover__subtitle {
-    font-size: 14px;
-    line-height: 16px; /* or 114% */
-    max-width: 288px;
-  }
-  .footer {
-    margin: 0 16px 24px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-self: start;
-    row-gap: 48px;
-  }
-  .footer__links {
-    display: flex;
-    flex-direction: column;
-    row-gap: 32px;
-  }
-  .footer__link {
-    font-size: 24px;
-    line-height: 24px; /* identical to box height, or 100% */
-  }
-  .footer__copyright {
-    line-height: 14px; /* identical to box height, or 100% */
-  }
-}

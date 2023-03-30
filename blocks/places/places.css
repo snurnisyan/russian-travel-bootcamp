@@ -1,0 +1,4 @@
+.places {
+  display: flex;
+  flex-direction: column;
+}
