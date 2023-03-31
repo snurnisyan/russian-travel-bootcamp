@@ -6,6 +6,10 @@
   padding-bottom: 80px;
 }
 
+.place:last-of-type {
+  padding-bottom: 0;
+}
+
 @media screen and (max-width: 1184px) {
   .place {
     grid-template-columns: 440px 1fr;
@@ -23,7 +27,7 @@
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 689px) {
   .place {
     display: flex;
     flex-direction: column;

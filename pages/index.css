@@ -12,7 +12,7 @@
 @import url('../blocks/header/__logo/header__logo.css');
 @import url('../blocks/header/__links/header__links.css');
 @import url('../blocks/header/__lang-link/header__lang-link.css');
-@import url('../blocks/header/__lang-link/_ru/header__lang-link_ru.css');
+@import url('../blocks/header/__lang-link/_active/header__lang-link_active.css');
 
 
 /* Подключаем стили для основной части контента */
@@ -60,4 +60,10 @@
 @import url('../blocks/footer/__links/footer__links.css');
 @import url('../blocks/footer/__link/footer__link.css');
 @import url('../blocks/footer/__copyright/footer__copyright.css');
+
+/*
+* {
+  outline: 1px solid yellow;
+}
+*/
 
