@@ -11,6 +11,8 @@
 
 <h3 align="center">Демо</h3>
 
+![travel](https://github.com/snurnisyan/russian-travel-bootcamp/assets/127420427/9eb413e0-f2c4-4e13-99b9-bee03c529757)
+
 
 ------
 
